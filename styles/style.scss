@@ -1,0 +1,220 @@
+@import 'setup';
+@import 'variables';
+
+
+//reset elements
+h1, h2, h3, h4, h5, h6, ul, li, p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+
+h1 {
+    font-size: $x-large;
+}
+
+h2 {
+    font-size: $large;
+}
+
+h3{
+    font-size: $medium;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    font-family: 'poppins', sans-serif;
+}
+
+//loading page
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+    .svg-calLoader {
+        width: 230px;
+        height: 230px;
+        transform-origin: 115px 115px;
+        animation: 1.4s linear infinite loader-spin;
+    }
+
+    .cal-loader__plane {
+        fill: $c-hilight;
+    }
+    .cal-loader__path {
+        stroke: $c-front;
+        animation: 1.4s ease-in-out infinite loader-path;
+    }
+
+    @keyframes loader-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes loader-path {
+        0% {
+            stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+        }
+        50% {
+            stroke-dasharray: 0, 450, 10, 30, 10, 30, 10, 30, 10;
+        }
+        100% {
+            stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+        }
+    }
+
+}
+
+//background video
+.video-left, .video-right {
+    object-fit: cover;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+.video-left {
+    left: 0;
+}
+
+.video-right {
+    right: 0;
+}
+
+//wrapper
+.wrapper {
+    width: 90%;
+    max-width: 1300px;
+}
+
+//header
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: black;
+    z-index: 2;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+//main sections
+main {
+    position: relative;
+    height: calc(400vh);
+    display: flex;
+    flex-direction: column;
+
+    section {
+        position: relative;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .section1 {
+        width: 100%;
+        left: 0;
+        background-image: url(https://psd.hackeryou.com/summer/image-1.jpg);
+        background-size: cover;
+        opacity: 1;
+        color: white;
+        -webkit-animation: fadein 2s linear 1.8s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 2s linear 1.8s; /* Firefox < 16 */
+        animation: fadein 2s linear 1.8s;
+
+        p {
+            font-size: $medium;
+        }
+
+        a {
+            color: black;
+            background-color: #ff8b67;
+            font-family: "Poppins";
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 20px;
+            padding: 18px 25px;
+        }
+    }
+
+    @keyframes fadein {
+        from { filter: brightness(0%);}
+        to   { filter: brightness(100%); }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { filter: brightness(0%);}
+        to   { filter: brightness(100%); }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { filter: brightness(0%);}
+        to   { filter: brightness(100%); }
+    }
+
+    .section2 {
+        width: 70%;
+        background-color: white;
+        color: black;
+    }
+
+    .section3 {
+        align-self: flex-end;
+        width: 70%;
+        background-color: white;
+        color: black;
+    }
+}
+
+
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    color: white;
+    background-color: black;
+    z-index: 2;
+}
