@@ -2,13 +2,16 @@ const loading = document.querySelector(".loading");
 const videoElementLeft = document.querySelector(".video-left");
 const videoElementRight = document.querySelector(".video-right");
 const videoElementBottom = document.querySelector(".video-bottom");
+const videoElementAmerica = document.querySelector(".video-america");
 const videoKorea = document.querySelector(".korea-video");
 const videoCanada = document.querySelector(".canada-video"); 
 const videoAfrica = document.querySelector(".africa-video");
+const videoAmerica = document.querySelector(".america-video");
 
 let video_count_left = 1;
 let video_count_right = 1;
 let video_count_bottom = 1;
+let video_count_america = 1;
 
 
 setTimeout(() => {
@@ -50,4 +53,16 @@ const nextVideoForBottom = () => {
 
     videoAfrica.setAttribute("src", "./assets/africa" + video_count_bottom + ".mp4");
     videoElementBottom.load();
+}
+
+const nextVideoForAmerica= () => {
+
+    video_count_america++;
+
+    if (video_count_america === 5) {
+        video_count_america = 1;
+    }
+
+    videoAmerica.setAttribute("src", "./assets/canada" + video_count_america + ".mp4");
+    videoElementAmerica.load();
 }
