@@ -7,6 +7,7 @@
     <title>Jake and Travel</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -21,15 +22,17 @@
 
     
     <header>
-        <h3>Menu</h3>
-        <nav>
-            <ul class="nav">
-                <li>Caribbean</li>
-                <li>Asia</li>
-                <li>Africa</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+        <div class="wrapper">
+            <img src="./assets/logo.png" alt="logo">
+            <nav>
+                <ul class="nav">
+                    <li>Destinations</li>
+                    <li>About us</li>
+                    <li>Site map</li>
+                    <li><i class="fas fa-phone-volume"></i>Call us to book: 519-330-8892</li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="loading">
@@ -467,13 +470,50 @@
                 </div>
             </div>
         </section>
-        <section class="section8">
-            <h2>Contact Us</h2>
+        <section class="footer">   
+                <div class="subscribe">
+                    <div class="wrapper">
+                        <i class="far fa-envelope-open"></i>
+                        <h2>Subscribe To Our Newsletter</h2>
+                        <p>Join our subscribers list to get the latest news, updates and special offers delivered directly in your inbox.
+                        </p>
+                        <form>
+                            <label for="email" class="sr-only"></label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email">
+                            <button>SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="site-map">
+                    <div class="wrapper">
+                        <div class="site-map-header">
+                            <img src="./assets/logo.png" alt="logo">
+                            <div class="follow-us">
+                                <h2>Follow Us:</h2>
+                                <ul>
+                                    <li><a href="https://github.com/jakejonggubaek"><i class="fab fa-github-square"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/jakejonggubaek/"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="https://twitter.com/BaekJonggu"><i class="fab fa-twitter-square"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="site-map-main">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>Created by Jonggu Jake Baek</p>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="./script.js"></script>
 </body>
