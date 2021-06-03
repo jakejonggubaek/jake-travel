@@ -1,12 +1,18 @@
 const loading = document.querySelector(".loading");
-const videoElementLeft = document.querySelector(".video-left");
-const videoElementRight = document.querySelector(".video-right");
+
+//background video
+const videoElementLeft = document.querySelector(".video-asia");
+const videoElementRight = document.querySelector(".video-carib");
 const videoElementBottom = document.querySelector(".video-bottom");
 const videoElementAmerica = document.querySelector(".video-america");
-const videoKorea = document.querySelector(".korea-video");
-const videoCanada = document.querySelector(".canada-video"); 
+const videoAsia = document.querySelector(".asia-video");
+const videoCarib = document.querySelector(".carib-video"); 
 const videoAfrica = document.querySelector(".africa-video");
 const videoAmerica = document.querySelector(".america-video");
+
+//section2 intro photos
+const gridContainer = document.querySelectorAll(".grid-container");
+
 
 let video_count_left = 1;
 let video_count_right = 1;
@@ -27,7 +33,7 @@ const nextVideoForLeft = () => {
         video_count_left = 1;
     }
 
-    videoKorea.setAttribute("src", "./assets/korea" + video_count_left + ".mp4");
+    videoAsia.setAttribute("src", "./assets/korea" + video_count_left + ".mp4");
     videoElementLeft.load();
 }
 
@@ -39,7 +45,7 @@ const nextVideoForRight = () => {
         video_count_right = 1;
     }
 
-    videoCanada.setAttribute("src", "./assets/beach" + video_count_right + ".mp4");
+    videoCarib.setAttribute("src", "./assets/beach" + video_count_right + ".mp4");
     videoElementRight.load();
 }
 

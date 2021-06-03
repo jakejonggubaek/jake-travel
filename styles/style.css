@@ -279,6 +279,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   height: 100vh;
 }
@@ -368,7 +372,7 @@ body {
   }
 }
 
-.video-left, .video-right {
+.video-asia, .video-carib {
   -o-object-fit: cover;
      object-fit: cover;
   width: 50vw;
@@ -378,11 +382,11 @@ body {
   z-index: -2;
 }
 
-.video-left {
+.video-asia {
   left: 0;
 }
 
-.video-right {
+.video-carib {
   right: 0;
 }
 
@@ -449,7 +453,7 @@ main section {
       -ms-flex-pack: center;
           justify-content: center;
   scroll-snap-align: start;
-  padding-top: 50px;
+  padding-top: 49px;
 }
 
 main section .content-container {
@@ -536,6 +540,10 @@ main .section1 a {
   padding: 18px 25px;
 }
 
+main .section1 a:hover, main .section1 a:focus {
+  opacity: 0.6;
+}
+
 @keyframes fadein {
   from {
     -webkit-filter: brightness(0%);
@@ -584,7 +592,9 @@ main .section2 .wrapper {
 }
 
 main .section2 .grid-container {
+  position: relative;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 main .section2 .grid-container img {
@@ -592,6 +602,14 @@ main .section2 .grid-container img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+main .section2 .grid-container:hover, main .section2 .grid-container:focus {
+  cursor: pointer;
+}
+
+main .section2 .grid-container:hover > .grid-container-desc {
+  right: 0;
 }
 
 main .section2 .grid-container-1 {
@@ -619,8 +637,6 @@ main .section2 .grid-container-3 {
   -ms-grid-row: 6;
   -ms-grid-row-span: 5;
   grid-row: 6 / 11;
-  background-color: #ff8b67;
-  background: center/cover no-repeat url(../assets/intro-asia.jpg);
 }
 
 main .section2 .grid-container-4 {
@@ -630,8 +646,6 @@ main .section2 .grid-container-4 {
   -ms-grid-row: 4;
   -ms-grid-row-span: 3;
   grid-row: 4 / 7;
-  background-color: #ff8b67;
-  background: center/cover no-repeat url(../assets/intro-america.jpg);
 }
 
 main .section2 .grid-container-5 {
@@ -657,6 +671,27 @@ main .section2 .grid-container-6 {
   -ms-grid-row-span: 4;
   grid-row: 7 / 11;
   text-align: left;
+}
+
+main .section2 .grid-container-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  background-color: black;
+  color: white;
+  -webkit-transition: right 1s;
+  transition: right 1s;
 }
 
 main .section3, main .section4 {
@@ -741,8 +776,173 @@ main .section6 {
           align-items: flex-end;
 }
 
-main .section7 {
+main .section7, main .section8 {
   background-color: white;
+}
+
+main .section7 {
+  width: 100%;
+  padding-top: 0;
+}
+
+main .section7 .wrapper {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[13];
+      grid-template-columns: repeat(13, 1fr);
+  -ms-grid-rows: (1fr)[15];
+      grid-template-rows: repeat(15, 1fr);
+  row-gap: 0;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+main .section7 .grid-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+main .section7 .grid-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .section7 .grid-container h2 {
+  margin-top: 0;
+}
+
+main .section7 .grid-container-1 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+}
+
+main .section7 .grid-container-2 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+main .section7 .grid-container-3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 5;
+  grid-row: 6 / 11;
+}
+
+main .section7 .grid-container-4 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 1;
+  grid-row: 11 / 12;
+}
+
+main .section7 .grid-container-5 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 4;
+  grid-row: 12 / 16;
+}
+
+main .section7 .grid-container-6 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1 / 7;
+}
+
+main .section7 .grid-container-7 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 3;
+  grid-row: 7 / 10;
+}
+
+main .section7 .grid-container-8 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 6;
+  grid-row: 10 / 16;
+}
+
+main .section7 .grid-container-9 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9 / 12;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+}
+
+main .section7 .grid-container-10 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9 / 12;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+main .section7 .grid-container-11 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9 / 12;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 5;
+  grid-row: 6 / 11;
+}
+
+main .section7 .grid-container-12 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9 / 12;
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 1;
+  grid-row: 11 / 12;
+}
+
+main .section7 .grid-container-13 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9 / 12;
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 4;
+  grid-row: 12 / 16;
 }
 
 footer {
